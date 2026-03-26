@@ -487,7 +487,8 @@
     font-weight: 500;
     margin-bottom: 10px;
   }
-  .shop-grid {
+  .shop-grid,
+  .anytime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 8px;
@@ -803,6 +804,120 @@
       <p>Day 8 抵達迪士尼時，建議同步預訂 Day 10 返機場的利木津巴士。</p>
     </div>
   </div>
+
+  <!-- Anytime Shops -->
+  <div class="anytime-header" id="anytime-toggle" onclick="toggleAnytime()" style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;margin-bottom:16px;-webkit-tap-highlight-color:transparent;">
+    <p class="section-label" style="margin-bottom:0;flex:1;">隨時可逛</p>
+    <span id="anytime-chevron" style="font-size:13px;color:var(--text-muted);transition:transform .2s;padding-left:8px;">▾</span>
+  </div>
+  <div id="anytime-body" style="display:none;margin-bottom:48px;">
+    <div class="anytime-grid">
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-shop">🏬 購物</div>
+        <div class="shop-name">Bic Camera</div>
+        <div class="shop-note">大型家電量販，電器、相機、藥妝均有</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-sweet">🍫 甜點</div>
+        <div class="shop-name">Morozoff</div>
+        <div class="shop-note">日式洋菓子老品牌，布丁與巧克力必買</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Morozoff+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-other">🛍 雜貨</div>
+        <div class="shop-name">3 Coins</div>
+        <div class="shop-note">300 円雜貨，生活小物與旅行用品超值</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=3Coins+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-shop">🏬 購物</div>
+        <div class="shop-name">Yodobashi</div>
+        <div class="shop-note">大型家電量販，品項齊全、免稅購物方便</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Yodobashi+Camera+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-shop">👕 服飾</div>
+        <div class="shop-name">Uniqlo</div>
+        <div class="shop-note">日本在地購買款式最齊，常有台灣未上市款</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Uniqlo+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-other">🛍 雜貨</div>
+        <div class="shop-name">Seria</div>
+        <div class="shop-note">百円均一，設計感雜貨與文具選品豐富</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Seria+100yen+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-other">🛍 雜貨</div>
+        <div class="shop-name">大創 Daiso</div>
+        <div class="shop-note">百円均一，品項最多，伴手禮首選</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Daiso+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+    <div class="shop-card">
+      <div class="shop-top">
+        <div class="shop-badge badge-other">🛒 綜合</div>
+        <div class="shop-name">唐吉訶德</div>
+        <div class="shop-note">藥妝、零食、伴手禮一次買齊，深夜也營業</div>
+      </div>
+      <div class="shop-footer">
+        <a class="shop-link" href="https://www.google.com/maps/search/?api=1&query=Don+Quijote+Tokyo" target="_blank">
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5zm0 6.1a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2z" fill="currentColor"/></svg>
+          附近分店
+        </a>
+      </div>
+    </div>
+  </div>
+  </div><!-- /anytime-body -->
 
   <!-- Days -->
   <p class="section-label">每日行程</p>
@@ -1345,6 +1460,15 @@
   <button class="quick-nav-toggle" id="quick-nav-toggle" aria-label="快速跳轉">☰</button>
 </div>
 <script>
+// ── Anytime shops toggle ──
+function toggleAnytime() {
+  const body = document.getElementById('anytime-body');
+  const chevron = document.getElementById('anytime-chevron');
+  const isHidden = body.style.display === 'none';
+  body.style.display = isHidden ? 'block' : 'none';
+  chevron.style.transform = isHidden ? '' : 'rotate(-90deg)';
+}
+
 (function() {
   const tripStart = new Date('2026-07-16');
   const today = new Date();
